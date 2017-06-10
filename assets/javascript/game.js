@@ -1,4 +1,4 @@
-// ========================= Words and Variables =========================
+//Variables
 
 var randomWords = "rlyehian cthulhu lovecraft cthuvian ryleh dagon kulullu necronomican yogsothoth azathoth shoggoths migo";
 
@@ -16,32 +16,28 @@ var gamePieces = ['.postUp', '.floor', '.postRight', '.rope', '.head', '.body', 
 
 var winner = '<div class="endGame">' +
     '<h1>You Win!</h1>' +
-    // '<img src = "../images/image1.jpg">' +
-    
+    '<h2><img src = "assets/images/image3.jpg"></h2>' +
+
     '<button type="button" class="btn btn-primary">But you could do better.</button>' +
     '</div>';
 
 
 var loser = '<div class="endGame">' +
     '<h1>You Lose...</h1>' +
-    // '<img src = "../images/image2.jpg">'+
+    '<h2><img src = "assets/images/image2.jpg"></h2>yea'+
     '<button type="button" class="btn btn-danger">Next Cultist Please.</button>' +
     '</div>';
 
 var gameHasEnded = false;
 
-
-// ========================= Game Operation =========================
-
-
-//Append letters to gameLetters div
+//Append letter
 var safeLetters = safeWord.split('').map(function(chars) {
     return "<h3>" + chars + "</h3>";
 });
 $('.gameLetters').append(safeLetters);
 
 
-//Post-game reload
+//Game over reload
 function reloadEvent() {
     $('.endGame button').click(function() {
         location.reload(true);
@@ -54,17 +50,15 @@ if (!gameHasEnded) {
         var key = String.fromCharCode(e.which);
         if (e.which < 97 || e.which > 122) {
             //a-z will be the only matches, else alert
-            return alert("Charcter was typed. It was: " + key + " ...please type a lower-case letter or else");
+            return alert("Charcter was typed. It was: " + key + " Please type a lower-case letter or else!");
         }
 
-
-
-        //if the key pressed is valid...
+        //If the key pressed is valid
         if (/[a-z]/.test(key)) {
 
             //check if key was already pressed
             if (selectedLetters.hasOwnProperty(key)) {
-                return alert("You've already chosen that letter, try again");
+                return alert("You've already chosen that letter!");
             } else {
 
                 //add to dictionary
@@ -113,7 +107,7 @@ if (!gameHasEnded) {
                 reloadEvent();
             }
 
-            //Action upon victory
+            //Victory
             if (shownLetters === safeWord.length) {
                 gameHasEnded = true;
                 $('body').contents().fadeOut(2000);
@@ -123,7 +117,7 @@ if (!gameHasEnded) {
 
 
 
-        } //valid keypres
+        } 
 
-    }); //window event
+    }); 
 }

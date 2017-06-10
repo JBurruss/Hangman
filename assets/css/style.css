@@ -1,4 +1,4 @@
-/* =========== Inherited Styles =========== */
+/* Body */
 
 html,
 body {
@@ -16,7 +16,7 @@ body {
 }
 
 
-/* =========== Instructional Text =========== */
+/* Instructions */
 
 .slogan {
     font-family: Luckiest Guy;
@@ -38,23 +38,25 @@ body {
 }
 
 
-/* =========== Game Pieces =========== */
+/* Game board */
 
 .gameLetters h3 {
-    border: 1.5px dotted black;
+    border: 1.5px solid black;
     color: transparent;
     padding: 4px 4px;
+    margin-top: 10px;
     display: inline-block;
 }
 
 .hangContain {
-    border: 1px dashed black;
+    border: 1px solid black;
     width: 65%;
     height: 375px;
+    background-color: darkblue;
 }
 
 .postUp {
-    background-color: sienna;
+    background-color: brown;
     display: inline-block;
     height: 350px;
     position: relative;
@@ -62,7 +64,7 @@ body {
 }
 
 .postRight {
-    background-color: sienna;
+    background-color: brown;
     bottom: 340px;
     display: inline-block;
     height: 10px;
@@ -72,7 +74,7 @@ body {
 }
 
 .rope {
-    background-color: khaki;
+    background-color: white;
     bottom: 310px;
     display: inline-block;
     height: 40px;
@@ -82,7 +84,7 @@ body {
 }
 
 .head {
-    background-color: grey;
+    background-color: khaki;
     bottom: 270px;
     border-radius: 50%;
     display: inline-block;
@@ -94,7 +96,7 @@ body {
 }
 
 .body {
-    background-color: grey;
+    background-color: purple;
     bottom: 197px;
     display: inline-block;
     height: 75px;
@@ -104,7 +106,7 @@ body {
 }
 
 .leftArm {
-    background-color: grey;
+    background-color: purple;
     bottom: 250px;
     display: inline-block;
     height: 10px;
@@ -114,17 +116,17 @@ body {
 }
 
 .rightArm {
-    background-color: grey;
+    background-color: purple;
     bottom: 250px;
     display: inline-block;
     height: 10px;
     position: relative;
-    right: 132px;
+    right: 140px;
     width: 50px;
 }
 
 .leftLeg {
-    background-color: grey;
+    background-color: purple;
     bottom: 173px;
     display: inline-block;
     height: 10px;
@@ -136,7 +138,7 @@ body {
 }
 
 .rightLeg {
-    background-color: grey;
+    background-color: purple;
     bottom: 187px;
     height: 10px;
     position: relative;
@@ -146,7 +148,7 @@ body {
 }
 
 .floor {
-    border: 5px solid saddlebrown;
+    border: 5px solid brown;
     bottom: 10px;
     position: relative;
     width: 70%;
@@ -156,19 +158,23 @@ body {
     display: block;
     font-size: 1.20em;
     margin: 30px 0px 0px 15px;
-    width: 100%;
+        width: 100%;
+
 }
 
 #chances {
     color: black;
+    margin-top: 10px;
 }
 
 #correct {
     color: red;
+    margin-top: 10px;
 }
 
 #incorrect {
     color: darkblue;
+    margin-top: 10px;
 }
 
 .letters {
@@ -182,7 +188,7 @@ body {
 }
 
 
-/* =========== Dynamic Game Classes =========== */
+/* Game Classes */
 
 .vanish {
     display: none;
@@ -194,20 +200,22 @@ body {
 }
 
 
-/* =========== Endgame Classes =========== */
+/* endGame */
 
 .endGame {
     height: 100vh;
     text-align: center;
     width: 100%;
     z-index: 100;
-}
+    }
 
 .endGame h1 {
     margin: 0;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .endGame button {
     margin-top: 30px;
+    margin-right: 10px;
 }
