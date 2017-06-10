@@ -24,7 +24,7 @@ var winner = '<div class="endGame">' +
 
 var loser = '<div class="endGame">' +
     '<h1>You Lose...</h1>' +
-    '<h2><img src = "assets/images/image2.jpg"></h2>yea'+
+    '<h2><img src = "assets/images/image2.jpg"></h2>'+
     '<button type="button" class="btn btn-danger">Next Cultist Please.</button>' +
     '</div>';
 
