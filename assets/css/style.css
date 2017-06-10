@@ -1,5 +1,213 @@
-#hangman{
-        display: block;
-        margin: 50px auto 0 auto;
-        border: 1px solid black;
-    }
+/* =========== Inherited Styles =========== */
+
+html,
+body {
+    background: rgb(191, 210, 85);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(191, 210, 85, 1) 0%, rgba(142, 185, 42, 1) 50%, rgba(114, 170, 0, 1) 51%, rgba(158, 203, 45, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(191, 210, 85, 1) 0%, rgba(142, 185, 42, 1) 50%, rgba(114, 170, 0, 1) 51%, rgba(158, 203, 45, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(191, 210, 85, 1) 0%, rgba(142, 185, 42, 1) 50%, rgba(114, 170, 0, 1) 51%, rgba(158, 203, 45, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d', GradientType=0);
+    /* IE6-9 */
+    font-family: Rock Salt;
+}
+
+
+/* =========== Instructional Text =========== */
+
+.slogan {
+    font-family: Luckiest Guy;
+}
+
+.description {
+    color: purple;
+    text-align: center;
+}
+
+.description span {
+    color: firebrick;
+    text-align: center;
+}
+
+.gameLetters span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* =========== Game Pieces =========== */
+
+.gameLetters h3 {
+    border: 1.5px dotted black;
+    color: transparent;
+    padding: 4px 4px;
+    display: inline-block;
+}
+
+.hangContain {
+    border: 1px dashed black;
+    width: 65%;
+    height: 375px;
+}
+
+.postUp {
+    background-color: sienna;
+    display: inline-block;
+    height: 350px;
+    position: relative;
+    width: 10px;
+}
+
+.postRight {
+    background-color: sienna;
+    bottom: 340px;
+    display: inline-block;
+    height: 10px;
+    left: -3px;
+    position: relative;
+    width: 120px;
+}
+
+.rope {
+    background-color: khaki;
+    bottom: 310px;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    right: 17px;
+    width: 10px;
+}
+
+.head {
+    background-color: grey;
+    bottom: 270px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    right: 46px;
+    width: 40px;
+    z-index: 10;
+}
+
+.body {
+    background-color: grey;
+    bottom: 197px;
+    display: inline-block;
+    height: 75px;
+    position: relative;
+    right: 75px;
+    width: 12px;
+}
+
+.leftArm {
+    background-color: grey;
+    bottom: 250px;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    right: 140px;
+    width: 50px;
+}
+
+.rightArm {
+    background-color: grey;
+    bottom: 250px;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    right: 132px;
+    width: 50px;
+}
+
+.leftLeg {
+    background-color: grey;
+    bottom: 173px;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    right: 232px;
+    transform: rotate(120deg);
+    width: 50px;
+    z-index: 2;
+}
+
+.rightLeg {
+    background-color: grey;
+    bottom: 187px;
+    height: 10px;
+    position: relative;
+    left: 116px;
+    transform: rotate(62deg);
+    width: 50px;
+}
+
+.floor {
+    border: 5px solid saddlebrown;
+    bottom: 10px;
+    position: relative;
+    width: 70%;
+}
+
+.counter {
+    display: block;
+    font-size: 1.20em;
+    margin: 30px 0px 0px 15px;
+    width: 100%;
+}
+
+#chances {
+    color: black;
+}
+
+#correct {
+    color: red;
+}
+
+#incorrect {
+    color: darkblue;
+}
+
+.letters {
+    display: inline-block;
+    padding: 17px;
+    color: black;
+}
+
+.letters:hover {
+    color: pink;
+}
+
+
+/* =========== Dynamic Game Classes =========== */
+
+.vanish {
+    display: none;
+}
+
+.charGuessed {
+    background-color: black;
+    color: black;
+}
+
+
+/* =========== Endgame Classes =========== */
+
+.endGame {
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.endGame h1 {
+    margin: 0;
+    padding-top: 30px;
+}
+
+.endGame button {
+    margin-top: 30px;
+}
